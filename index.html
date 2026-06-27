@@ -6,8 +6,9 @@
     <meta name="description" content="Sumit Sah — Full Stack Developer portfolio showcasing projects, skills, and contact information.">
     <title>Sumit Sah — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/portfolio/Images/userAsset/logo.png">
+
     
 </head>
 <body>
@@ -18,10 +19,15 @@
                     <img src="./Images/userAsset/logo.png"  class="logo">
                     <div class="logo-text">umit Sah</div>
                 </div>
-                <div class="nav-items">
-                    <div><a href="#projects">Projects</a></div>
-                    <div><a href="#skills">Skills</a></div>
-                    <div><a href="#contactme">Contact Me</a></div>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-items" id="nav-items">
+                    <div><a href="#projects" class="nav-link">Projects</a></div>
+                    <div><a href="#skills" class="nav-link">Skills</a></div>
+                    <div><a href="#contactme" class="nav-link">Contact Me</a></div>
                 </div>
             </div>
         </div>
@@ -258,18 +264,43 @@
   <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
     <script>
       var typeData = new Typed(".role", {
-      strings: [
-        "Full Stack Developer",
-        "Web Developer",
-        "UI-UX Designer",
-        "Backend Developer",
-        "Coder",
-      ],
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 80,
-      backDelay: 1000,
-    });
-  </script>
+        strings: [
+          "Full Stack Developer",
+          "Web Developer",
+          "UI-UX Designer",
+          "Backend Developer",
+          "Coder",
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+
+      const hamburger = document.getElementById('hamburger-btn');
+      const navItems = document.getElementById('nav-items');
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = navItems.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navItems.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navItems.contains(e.target)) {
+          navItems.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    </script>
 </body>
 </html>
