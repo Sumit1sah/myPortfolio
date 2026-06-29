@@ -114,7 +114,7 @@
                             <a href="https://github.com/Sumit1sah/Weather-app" target="_blank">
                                 <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                             </a>
-                            <a href="https://weather-eghw1v8uf-sumit1sahs-projects.vercel.app/" target="_blank">
+                            <a href="https://weather-app-iota-seven-21.vercel.app/" target="_blank">
                                 <i title="Live Link" class="fa-solid fa-link icon"></i>
                             </a>
                         </div>
@@ -151,21 +151,23 @@
                     <div class="project-number project-number-left">04</div>
                     <div class="project-content project-content-right">
                         <div class="project-skills-container">
-                            <img class="project-skill" src="./Images/stack/NextJsCircle.png" alt="" />
+                            <img class="project-skill" src="./Images/stack/HTML.png" alt="" />
+                            <img class="project-skill" src="./Images/stack/CSS.png" alt="" />
+                            <img class="project-skill" src="./Images/stack/Javascript.svg" alt="" />
                             <img class="project-skill" src="./Images/stack/Tailwind.png" alt="" />
                             <img class="project-skill" src="./Images/stack/Vercel.svg" alt="" />
                         </div>
-                        <h2 class="project-heading">Granit</h2>
+                        <h2 class="project-heading">Task Manager</h2>
                         <p class="project-sub-heading">
-                            A architectural website to plan your building or home (Hebrew
-                            Language)
+                           A simple, clean browser-based task manager built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies, no build step required.
                         </p>
                         <div class="btn-group">
-                            <button class="btn-pink btn-project">Read More</button>
-                            <a href="#" target="_blank">
+                            <a href="https://github.com/Sumit1sah/TaskManager/blob/main/README.md" target="_blank"><button class="btn-pink btn-project">Read More</button></a>
+                            
+                            <a href="https://github.com/Sumit1sah/TaskManager" target="_blank">
                                 <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://task-manager-phi-one-64.vercel.app/" target="_blank">
                                 <i title="Live Link" class="fa-solid fa-link icon"></i>
                             </a>
                         </div>
@@ -262,45 +264,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-    <script>
-      var typeData = new Typed(".role", {
-        strings: [
-          "Full Stack Developer",
-          "Web Developer",
-          "UI-UX Designer",
-          "Backend Developer",
-          "Coder",
-        ],
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 80,
-        backDelay: 1000,
-      });
-
-      const hamburger = document.getElementById('hamburger-btn');
-      const navItems = document.getElementById('nav-items');
-
-      hamburger.addEventListener('click', () => {
-        const isOpen = navItems.classList.toggle('open');
-        hamburger.classList.toggle('open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
-      });
-
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          navItems.classList.remove('open');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-        });
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navItems.contains(e.target)) {
-          navItems.classList.remove('open');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-        }
-      });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

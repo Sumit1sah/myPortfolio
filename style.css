@@ -539,7 +539,7 @@ a {
     font-size: clamp(4em, 8vw, 10em);
     font-weight: 800;
     color: rgba(0, 0, 0, 0.05);
-    bottom: -24%;
+    bottom: -18%;
     right: 1%;
     white-space: nowrap;
     text-transform: uppercase;
